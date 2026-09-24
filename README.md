@@ -12,7 +12,7 @@ Alat sederhana berbasis web (*HTML/JavaScript*) untuk membuat tombol chat WhatsA
 ---
 
 ## 🚀 Cara Menggunakan
-1. Buka halaman demo live tool ini di: [Link GitHub Pages Anda]
+1. Buka halaman demo live tool ini disini: https://fansid77.github.io/whatsapp-floating-button/
 2. Masukkan nomor WhatsApp dan pesan otomatis yang diinginkan.
 3. Klik tombol **Generate**, lalu salin (*copy*) kode HTML yang dihasilkan.
 4. Tempelkan kode tersebut tepat di atas tag penutup `</body>` pada website Anda.
