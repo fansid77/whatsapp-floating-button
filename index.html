@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Widget WhatsApp Gratis | profesor.web.id</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; padding: 2rem 1rem; margin: 0; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        h1 { font-size: 1.5rem; color: #0284c7; margin-bottom: 0.5rem; }
+        p { color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; box-sizing: border-box; }
+        button { background: #25d366; color: white; border: none; padding: 0.75rem 1.5rem; font-weight: 600; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 1rem; }
+        button:hover { background: #1ebe5d; }
+        .code-box { background: #0f172a; color: #38bdf8; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.85rem; margin-top: 1.5rem; white-space: pre-wrap; word-break: break-all; }
+        .footer-note { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: #64748b; }
+        .footer-note a { color: #0284c7; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💬 WhatsApp Floating Button Generator</h1>
+    <p>Buat widget tombol chat WhatsApp mengambang secara instan untuk website Anda secara gratis.</p>
+    
+    <div class="form-group">
+        <label>Nomor WhatsApp (Awali dengan kode negara, misal: 628123456789):</label>
+        <input type="text" id="waNumber" placeholder="628xxxxxxxxxx" value="628123456789">
+    </div>
+    
+    <div class="form-group">
+        <label>Pesan Otomatis:</label>
+        <textarea id="waMessage">Halo, saya ingin bertanya mengenai layanan pembuatan website di profesor.web.id</textarea>
+    </div>
+    
+    <button onclick="generateCode()">Generate & Ambil Kode</button>
+
+    <div id="resultSection" style="display:none;">
+        <label style="margin-top: 1.5rem;">Salin Kode HTML Ini ke Website Anda:</label>
+        <div class="code-box" id="outputCode"></div>
+    </div>
+</div>
+
+<div class="footer-note">
+    Butuh custom website profesional? Kunjungi <a href="https://profesor.web.id" target="_blank">profesor.web.id</a>
+</div>
+
+<script>
+function generateCode() {
+    let num = document.getElementById('waNumber').value;
+    let msg = encodeURIComponent(document.getElementById('waMessage').value);
+    
+    let widgetCode = `<!-- WhatsApp Widget by profesor.web.id -->\n<div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">\n  <a href="https://wa.me/${num}?text=${msg}" target="_blank" style="background-color: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-family: sans-serif; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 8px;">\n    💬 Chat WhatsApp\n  </a>\n</div>`;
+    
+    document.getElementById('outputCode').innerText = widgetCode;
+    document.getElementById('resultSection').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
